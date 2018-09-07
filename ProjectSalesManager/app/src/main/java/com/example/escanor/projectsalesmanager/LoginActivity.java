@@ -3,15 +3,60 @@ package com.example.escanor.projectsalesmanager;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.Toast;
 
-public class LoginActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity
+{
+    EditText txtUserName,txtPassword;
+    Button btnDangNhap,btnDangky;
+    ImageView btnFace,btnZalo;
+    CheckBox chbNhoDangNhap;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
         actionBarCustom();
+
+        addControls();
+        addEvents();
+    }
+
+    private void addEvents()
+    {
+        btnFace.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(LoginActivity.this,"Chức năng chưa được xây dựng!!!",Toast.LENGTH_LONG);
+            }
+        });
+
+        btnZalo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(LoginActivity.this,"Chức năng chưa được xây dựng!!!",Toast.LENGTH_LONG);
+            }
+        });
+    }
+
+    private void addControls()
+    {
+        txtUserName=findViewById(R.id.txtUserName);
+        txtPassword=findViewById(R.id.txtPassword);
+
+        btnDangky=findViewById(R.id.btnDangKy);
+        btnDangNhap=findViewById(R.id.btnDangNhap);
+
+        btnFace=findViewById(R.id.btnFacebook);
+        btnZalo=findViewById(R.id.btnZalo);
     }
 
     private void actionBarCustom()

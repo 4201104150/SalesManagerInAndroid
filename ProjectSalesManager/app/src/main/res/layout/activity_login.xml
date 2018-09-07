@@ -5,16 +5,98 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".LoginActivity">
+    tools:context=".LoginActivity"
+    android:background="@drawable/destoplogin">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="262dp"
-        android:orientation="vertical"></LinearLayout>
+        android:layout_height="277dp"
+        android:gravity="bottom"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="User Name"
+            android:textColor="#896212"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/txtUserName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PassWord"
+            android:textColor="#896212"
+            android:textSize="18sp" />
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"></LinearLayout>
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/txtPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPassword" />
+
+        <CheckBox
+            android:id="@+id/chbNhoDangNhap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nhớ đăng nhập"
+            android:textAllCaps="false"
+            android:textColor="#0d0902"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btnDangNhap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Đăng nhập"
+            android:textAllCaps="false" />
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/btnFacebook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/face"
+                tools:layout_editor_absoluteX="354dp"
+                tools:layout_editor_absoluteY="32dp" />
+
+            <ImageView
+                android:id="@+id/btnZalo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/zalo"
+                tools:layout_editor_absoluteX="354dp"
+                tools:layout_editor_absoluteY="84dp" />
+
+            <Button
+                android:id="@+id/btnDangKy"
+                android:layout_width="wrap_content"
+                android:layout_height="39dp"
+                android:text="Đăng ký tại đây"
+                android:textAllCaps="false"
+                tools:layout_editor_absoluteX="132dp"
+                tools:layout_editor_absoluteY="16dp" />
+        </android.support.constraint.ConstraintLayout>
+
+    </LinearLayout>
 
 </LinearLayout>
