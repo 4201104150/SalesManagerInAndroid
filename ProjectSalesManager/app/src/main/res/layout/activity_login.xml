@@ -41,17 +41,18 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/l3"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <EditText
             android:id="@+id/txtPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/et_bg"
             android:ems="10"
-            android:inputType="textPassword"
-            android:background="@drawable/et_bg"/>
+            android:inputType="textPassword" />
 
         <CheckBox
             android:id="@+id/chbNhoDangNhap"
@@ -67,22 +68,24 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:background="@drawable/buttonstyle"
             android:text="Đăng nhập"
             android:textAllCaps="false"
-            android:background="@drawable/et_bg"
-            android:textColor="@color/colorAccent"/>
+            android:textColor="@color/colorAccent"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
         <android.support.constraint.ConstraintLayout
             android:id="@+id/l2"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
             <ImageView
                 android:id="@+id/btnFacebook"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
-                android:background="@drawable/et_bg"
+                android:background="@drawable/buttonstyle"
                 app:layout_constraintBottom_toTopOf="@+id/btnZalo"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:srcCompat="@drawable/face" />
@@ -92,28 +95,30 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="49dp"
-                android:background="@drawable/et_bg"
+                android:background="@drawable/buttonstyle"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:srcCompat="@drawable/zalo" />
 
             <Button
                 android:id="@+id/btnDangKy"
-                android:layout_width="wrap_content"
-                android:layout_height="39dp"
+                android:layout_width="108dp"
+                android:layout_height="45dp"
                 android:layout_marginBottom="110dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginLeft="132dp"
                 android:layout_marginRight="8dp"
                 android:layout_marginStart="132dp"
                 android:layout_marginTop="16dp"
-                android:background="@drawable/et_bg"
+                android:background="@drawable/buttonstyle"
                 android:text="Đăng ký tại đây"
                 android:textAllCaps="false"
                 android:textColor="@color/colorAccent"
+                android:textSize="18sp"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.081"
+                app:layout_constraintHorizontal_bias="0.044"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.0" />

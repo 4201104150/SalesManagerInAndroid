@@ -21,7 +21,8 @@ public class LoginActivity extends AppCompatActivity
     ImageView btnFace,btnZalo;
     CheckBox chbNhoDangNhap;
 
-    LinearLayout l1,l2;
+    LinearLayout l1;
+    LinearLayout l2;
 
     Animation uptodown,downtoup;
 
@@ -66,12 +67,14 @@ public class LoginActivity extends AppCompatActivity
         btnZalo=findViewById(R.id.btnZalo);
 
         l1=(LinearLayout)findViewById(R.id.l1);
-        l2=(LinearLayout)findViewById(R.id.l2);
+        l1.setAnimation(AnimationUtils.loadAnimation(this,R.anim.uptodown));
+        l2=(LinearLayout)findViewById(R.id.l3);
+        l2.setAnimation(AnimationUtils.loadAnimation(this,R.anim.downtoup));
 
-        uptodown= AnimationUtils.loadAnimation(this,R.anim.uptodown);
-        l1.setAnimation(uptodown);
-        downtoup=AnimationUtils.loadAnimation(this,R.anim.downtoup);
-        l2.setAnimation(downtoup);
+        //uptodown= AnimationUtils.loadAnimation(this,R.anim.uptodown);
+        //l1.setAnimation(uptodown);
+        //downtoup=AnimationUtils.loadAnimation(this,R.anim.downtoup);
+        //l2.setAnimation(downtoup);
     }
 
     private void actionBarCustom()
