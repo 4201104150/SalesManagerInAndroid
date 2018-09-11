@@ -8,7 +8,7 @@
     <ImageButton
         android:id="@+id/btnHinhAnh"
         android:layout_width="match_parent"
-        android:layout_height="161dp"
+        android:layout_height="158dp"
         app:srcCompat="@android:drawable/btn_star_big_on" />
 
     <TextView
