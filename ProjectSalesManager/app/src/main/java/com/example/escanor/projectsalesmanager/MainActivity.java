@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity
                 }
                 finally
                 {
-                    Intent activitymoi=new Intent(MainActivity.this,LoginActivity.class);
+                    Intent activitymoi=new Intent(MainActivity.this,SanPhamActivity.class);
                     startActivity(activitymoi);
                 }
             }

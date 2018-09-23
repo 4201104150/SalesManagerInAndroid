@@ -57,14 +57,14 @@ public class LoginActivity extends AppCompatActivity
 
     private void addControls()
     {
-        txtUserName=findViewById(R.id.txtUserName);
-        txtPassword=findViewById(R.id.txtPassword);
+        txtUserName= (EditText) findViewById(R.id.txtUserName);
+        txtPassword= (EditText) findViewById(R.id.txtPassword);
 
-        btnDangky=findViewById(R.id.btnDangKy);
-        btnDangNhap=findViewById(R.id.btnDangNhap);
+        btnDangky= (Button) findViewById(R.id.btnDangKy);
+        btnDangNhap= (Button) findViewById(R.id.btnDangNhap);
 
-        btnFace=findViewById(R.id.btnFacebook);
-        btnZalo=findViewById(R.id.btnZalo);
+        btnFace= (ImageView) findViewById(R.id.btnFacebook);
+        btnZalo= (ImageView) findViewById(R.id.btnZalo);
 
         l1=(LinearLayout)findViewById(R.id.l1);
         l1.setAnimation(AnimationUtils.loadAnimation(this,R.anim.uptodown));
