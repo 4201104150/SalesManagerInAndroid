@@ -6,74 +6,85 @@ import java.util.Date;
 public class ThongTinSanPham
 {
     public int ID;
-    public String IDComodity;
+    public String IDNhanVien;
     public String ChiTiet;
     public String HinhAnh;
     public String NhaPhanPhoi;
     public String TrangThai;
-    public int SoLuonh;
+    public int SoLuong;
     public int GiaNhap;
     public int GiaBan;
     public int GiaKhuyenMai;
 
-    public ThongTinSanPham() {
+    public ThongTinSanPham()
+    {
     }
-
-    public ThongTinSanPham(int ID, String IDComodity, String chiTiet, String hinhAnh, String nhaPhanPhoi, String trangThai, int soLuonh, int giaNhap, int giaBan, int giaKhuyenMai)
+    public ThongTinSanPham(int ID, String IDNhanVien, String chiTiet, String hinhAnh, String nhaPhanPhoi, String trangThai, int soLuong, int giaNhap, int giaBan, int giaKhuyenMai)
     {
         this.ID = ID;
-        this.IDComodity = IDComodity;
+        this.IDNhanVien = IDNhanVien;
         ChiTiet = chiTiet;
         HinhAnh = hinhAnh;
         NhaPhanPhoi = nhaPhanPhoi;
         TrangThai = trangThai;
-        SoLuonh = soLuonh;
+        SoLuong = soLuong;
         GiaNhap = giaNhap;
         GiaBan = giaBan;
         GiaKhuyenMai = giaKhuyenMai;
     }
 
-    public int getID() {
+    public int getID()
+    {
         return ID;
     }
 
-    public void setID(int ID) {
+    public void setID(int ID)
+    {
         this.ID = ID;
     }
 
-    public String getIDComodity() {
-        return IDComodity;
+    public String getIDNhanVien()
+    {
+        return IDNhanVien;
     }
 
-    public void setIDComodity(String IDComodity) {
-        this.IDComodity = IDComodity;
+    public void setIDNhanVien(String IDNhanVien)
+    {
+        this.IDNhanVien = IDNhanVien;
     }
 
-    public String getChiTiet() {
+    public String getChiTiet()
+    {
         return ChiTiet;
     }
 
-    public void setChiTiet(String chiTiet) {
+    public void setChiTiet(String chiTiet)
+    {
         ChiTiet = chiTiet;
     }
 
-    public String getHinhAnh() {
+    public String getHinhAnh()
+    {
         return HinhAnh;
     }
 
-    public void setHinhAnh(String hinhAnh) {
+    public void setHinhAnh(String hinhAnh)
+    {
         HinhAnh = hinhAnh;
     }
 
-    public String getNhaPhanPhoi() {
+    public String getNhaPhanPhoi()
+    {
         return NhaPhanPhoi;
     }
 
-    public void setNhaPhanPhoi(String nhaPhanPhoi) {
+    public void setNhaPhanPhoi(String nhaPhanPhoi)
+    {
         NhaPhanPhoi = nhaPhanPhoi;
     }
 
-    public String getTrangThai() {
+    public String getTrangThai()
+    {
         return TrangThai;
     }
 
@@ -81,35 +92,42 @@ public class ThongTinSanPham
         TrangThai = trangThai;
     }
 
-    public int getSoLuonh() {
-        return SoLuonh;
+    public int getSoLuong() {
+        return SoLuong;
     }
 
-    public void setSoLuonh(int soLuonh) {
-        SoLuonh = soLuonh;
+    public void setSoLuong(int soLuong)
+    {
+        SoLuong = soLuong;
     }
 
-    public int getGiaNhap() {
+    public int getGiaNhap()
+    {
         return GiaNhap;
     }
 
-    public void setGiaNhap(int giaNhap) {
+    public void setGiaNhap(int giaNhap)
+    {
         GiaNhap = giaNhap;
     }
 
-    public int getGiaBan() {
+    public int getGiaBan()
+    {
         return GiaBan;
     }
 
-    public void setGiaBan(int giaBan) {
+    public void setGiaBan(int giaBan)
+    {
         GiaBan = giaBan;
     }
 
-    public int getGiaKhuyenMai() {
+    public int getGiaKhuyenMai()
+    {
         return GiaKhuyenMai;
     }
 
-    public void setGiaKhuyenMai(int giaKhuyenMai) {
+    public void setGiaKhuyenMai(int giaKhuyenMai)
+    {
         GiaKhuyenMai = giaKhuyenMai;
     }
 }

@@ -24,7 +24,19 @@ import android.widget.ListView;
 import android.widget.Toolbar;
 import android.widget.ViewFlipper;
 
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonArrayRequest;
+import com.android.volley.toolbox.Volley;
+import com.example.escanor.adapter.ThongTinSanPhamAdapter;
+import com.example.escanor.model.ThongTinSanPham;
+import com.example.escanor.util.CheckConnection;
+import com.example.escanor.util.Server;
 import com.squareup.picasso.Picasso;
+import com.squareup.picasso.Request;
+
+import org.json.JSONArray;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -41,16 +53,48 @@ public class SanPhamActivity extends AppCompatActivity
     ListView lvMangHinhChinh;
     DrawerLayout drawerLayout;
 
+    ArrayList<ThongTinSanPham> mangThongTinSanPham;
+    ThongTinSanPhamAdapter thongTinSanPhamAdapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_san_pham);
-
         addControls();
-        //actionBar();
-        actionViewFlipper();
-        addEvents();
+        if(CheckConnection.haveNetworkConnection(getApplicationContext()))
+        {
+            actionViewFlipper();
+            addEvents();
+            GetDuLieuSanPham();
+        }
+        else
+        {
+            CheckConnection.ShowToast_Short(getApplicationContext(),"Bạn hãy kiểm tra lại kết nối!");
+            finish();
+        }
+    }
+
+    private void GetDuLieuSanPham()
+    {
+        RequestQueue requestQueue= Volley.newRequestQueue(getApplicationContext());
+        JsonArrayRequest jsonArrayRequest=new JsonArrayRequest(Server.DuongDan, new Response.Listener<JSONArray>() {
+            @Override
+            public void onResponse(JSONArray response)
+            {
+                if(response!=null)
+                {
+                    
+                }
+            }
+        }, new Response.ErrorListener()
+        {
+            @Override
+            public void onErrorResponse(VolleyError error)
+            {
+
+            }
+        });
     }
 
     private void actionViewFlipper() {
@@ -86,6 +130,10 @@ public class SanPhamActivity extends AppCompatActivity
         navigationView= (NavigationView) findViewById(R.id.navigationview);
         lvMangHinhChinh= (ListView) findViewById(R.id.lvMangHinhChinh);
         drawerLayout= (DrawerLayout) findViewById(R.id.drawerlayout);
+
+        mangThongTinSanPham=new ArrayList<>();
+        thongTinSanPhamAdapter=new ThongTinSanPhamAdapter(mangThongTinSanPham,getApplicationContext());
+        lvMangHinhChinh.setAdapter(thongTinSanPhamAdapter);
     }
 
 }
