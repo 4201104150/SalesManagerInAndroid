@@ -6,7 +6,7 @@ import java.util.Date;
 public class ThongTinSanPham
 {
     public int ID;
-    public String IDNhanVien;
+    public int IDNhanVien;
     public String ChiTiet;
     public String HinhAnh;
     public String NhaPhanPhoi;
@@ -19,18 +19,18 @@ public class ThongTinSanPham
     public ThongTinSanPham()
     {
     }
-    public ThongTinSanPham(int ID, String IDNhanVien, String chiTiet, String hinhAnh, String nhaPhanPhoi, String trangThai, int soLuong, int giaNhap, int giaBan, int giaKhuyenMai)
+    public ThongTinSanPham(int ID, int IDNhanVien, String chiTiet, String hinhAnh, String nhaPhanPhoi, String trangThai, int soLuong, int giaNhap, int giaBan, int giaKhuyenMai)
     {
         this.ID = ID;
         this.IDNhanVien = IDNhanVien;
-        ChiTiet = chiTiet;
-        HinhAnh = hinhAnh;
-        NhaPhanPhoi = nhaPhanPhoi;
-        TrangThai = trangThai;
-        SoLuong = soLuong;
-        GiaNhap = giaNhap;
-        GiaBan = giaBan;
-        GiaKhuyenMai = giaKhuyenMai;
+        this.ChiTiet = chiTiet;
+        this.HinhAnh = hinhAnh;
+        this.NhaPhanPhoi = nhaPhanPhoi;
+        this.TrangThai = trangThai;
+        this.SoLuong = soLuong;
+        this.GiaNhap = giaNhap;
+        this.GiaBan = giaBan;
+        this.GiaKhuyenMai = giaKhuyenMai;
     }
 
     public int getID()
@@ -43,12 +43,12 @@ public class ThongTinSanPham
         this.ID = ID;
     }
 
-    public String getIDNhanVien()
+    public int getIDNhanVien()
     {
         return IDNhanVien;
     }
 
-    public void setIDNhanVien(String IDNhanVien)
+    public void setIDNhanVien(int IDNhanVien)
     {
         this.IDNhanVien = IDNhanVien;
     }

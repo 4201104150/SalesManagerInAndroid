@@ -38,10 +38,11 @@
                     android:text="Sản phẩm mới nhất"
                     android:textSize="20sp" />
 
-                <android.support.v7.widget.RecyclerView
-                    android:id="@+id/recyclerview"
+                <ListView
+                    android:id="@+id/lvDanhSachSanPhamMoi"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+                    android:layout_height="match_parent">
+                </ListView>
             </LinearLayout>
         </LinearLayout>
 

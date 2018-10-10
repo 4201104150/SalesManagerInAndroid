@@ -17,6 +17,7 @@ import com.example.escanor.model.ThongTinSanPham;
 import com.example.escanor.projectsalesmanager.R;
 import com.squareup.picasso.Picasso;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -79,6 +80,7 @@ public class ThongTinSanPhamAdapter extends BaseAdapter
         {
             viewHolder  = (ViewHolder) convertView.getTag();
         }
+        DecimalFormat decimalFormat=new DecimalFormat("###,###");
         ThongTinSanPham thongTinSanPham= (ThongTinSanPham) getItem(position);
         viewHolder.txtThongTinSP.setText(thongTinSanPham.getChiTiet());
         viewHolder.txtGiaGoc.setText(thongTinSanPham.getGiaBan());
